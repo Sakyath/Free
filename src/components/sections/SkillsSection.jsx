@@ -2,67 +2,6 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { SectionHeader, GlassCard, IconBadge } from '../ui/Primitives'
 
-<<<<<<< HEAD
-const categories = [
-  {
-    title: 'Frontend',
-    color: '#60A5FA',
-    icon: '🎨',
-    skills: [
-      { name: 'React.js', level: 92 },
-      { name: 'JavaScript (ES6+)', level: 90 },
-      { name: 'HTML5 / CSS3', level: 95 },
-      { name: 'Tailwind CSS', level: 85 },
-      { name: 'Bootstrap', level: 82 },
-    ],
-  },
-  {
-    title: 'Backend',
-    color: '#A78BFA',
-    icon: '⚙️',
-    skills: [
-      { name: 'Node.js', level: 82 },
-      { name: 'Express.js', level: 80 },
-      { name: 'REST APIs', level: 88 },
-      { name: 'Spring Boot', level: 70 },
-      { name: '.NET MVC', level: 68 },
-    ],
-  },
-  {
-    title: 'Testing',
-    color: '#34D399',
-    icon: '🧪',
-    skills: [
-      { name: 'Manual Testing', level: 92 },
-      { name: 'Selenium', level: 86 },
-      { name: 'Playwright', level: 85 },
-      { name: 'API Testing', level: 88 },
-      { name: 'SQL', level: 78 },
-    ],
-  },
-  {
-    title: 'Tools',
-    color: '#FBBF24',
-    icon: '🔧',
-    skills: [
-      { name: 'Git / GitHub', level: 92 },
-      { name: 'Postman', level: 88 },
-      { name: 'Jira', level: 80 },
-      { name: 'VS Code', level: 95 },
-      { name: 'CI/CD', level: 70 },
-    ],
-  },
-  {
-    title: 'Cloud',
-    color: '#6EE7F9',
-    icon: '☁️',
-    skills: [
-      { name: 'Azure', level: 72 },
-      { name: 'Firebase', level: 80 },
-      { name: 'Vercel', level: 88 },
-      { name: 'MongoDB Atlas', level: 72 },
-    ],
-=======
 const skillCategories = [
   {
     title: 'Languages',
@@ -111,7 +50,6 @@ const skillCategories = [
     icon: '⭐',
     color: '#F87171',
     skills: ['Agile/Scrum', 'SDLC', 'STLC', 'Bug Tracking', 'Problem Solving', 'Cross-browser Testing', 'Freelance Delivery'],
->>>>>>> a7cd96b (Update portfolio sections)
   },
 ]
 
@@ -138,139 +76,7 @@ function SkillBar({ skill, color, isInView, delay }) {
           }}
         />
       </div>
-<<<<<<< HEAD
     </div>
-=======
-    </motion.div>
-  )
-}
-
-/* ---- Neural Network Visualization ---- */
-function NeuralNetwork({ isInView }) {
-  const nodes = [
-    // Input layer
-    { x: 80, y: 60, label: 'QA', color: '#60A5FA' },
-    { x: 80, y: 130, label: 'React', color: '#6EE7F9' },
-    { x: 80, y: 200, label: 'Node.js', color: '#A78BFA' },
-    { x: 80, y: 270, label: 'Automation', color: '#60A5FA' },
-    // Hidden layer
-    { x: 250, y: 95, label: 'Testing', color: '#6EE7F9' },
-    { x: 250, y: 165, label: 'Development', color: '#A78BFA' },
-    { x: 250, y: 235, label: 'APIs', color: '#60A5FA' },
-    // Output
-    { x: 420, y: 150, label: 'Quality', color: '#A78BFA' },
-  ]
-
-  const connections = [
-    [0,4],[0,5],[0,6],
-    [1,4],[1,5],
-    [2,5],[2,6],
-    [3,4],[3,5],[3,6],
-    [4,7],[5,7],[6,7],
-  ]
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 1, delay: 0.3 }}
-      style={{
-        width: '100%',
-        maxWidth: '500px',
-        margin: '0 auto 48px',
-        padding: '20px',
-      }}
-    >
-      <svg viewBox="0 0 500 320" style={{ width: '100%', height: 'auto' }}>
-        {/* Connections */}
-        {connections.map(([from, to], i) => (
-          <motion.line
-            key={i}
-            x1={nodes[from].x}
-            y1={nodes[from].y}
-            x2={nodes[to].x}
-            y2={nodes[to].y}
-            stroke="url(#lineGrad)"
-            strokeWidth="1"
-            opacity="0.2"
-            initial={{ pathLength: 0 }}
-            animate={isInView ? { pathLength: 1 } : {}}
-            transition={{ duration: 1.5, delay: 0.5 + i * 0.05 }}
-          />
-        ))}
-
-        {/* Animated pulse along connections */}
-        {connections.map(([from, to], i) => (
-          <motion.circle
-            key={`pulse-${i}`}
-            r="2"
-            fill={nodes[from].color}
-            opacity="0.5"
-            initial={{ cx: nodes[from].x, cy: nodes[from].y }}
-            animate={isInView ? {
-              cx: [nodes[from].x, nodes[to].x],
-              cy: [nodes[from].y, nodes[to].y],
-              opacity: [0, 0.6, 0],
-            } : {}}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              delay: i * 0.3,
-              ease: 'easeInOut',
-            }}
-          />
-        ))}
-
-        {/* Nodes */}
-        {nodes.map((node, i) => (
-          <g key={i}>
-            <motion.circle
-              cx={node.x}
-              cy={node.y}
-              r="24"
-              fill={`${node.color}10`}
-              stroke={node.color}
-              strokeWidth="1.5"
-              initial={{ scale: 0, opacity: 0 }}
-              animate={isInView ? { scale: 1, opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
-            />
-            <motion.circle
-              cx={node.x}
-              cy={node.y}
-              r="28"
-              fill="none"
-              stroke={node.color}
-              strokeWidth="0.5"
-              opacity="0.2"
-              initial={{ scale: 0 }}
-              animate={isInView ? { scale: [1, 1.3, 1] } : {}}
-              transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
-            />
-            <text
-              x={node.x}
-              y={node.y + 1}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="#475569"
-              fontSize="9"
-              fontWeight="600"
-              fontFamily="'Inter', sans-serif"
-            >
-              {node.label}
-            </text>
-          </g>
-        ))}
-
-        <defs>
-          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#60A5FA" />
-            <stop offset="100%" stopColor="#A78BFA" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </motion.div>
->>>>>>> a7cd96b (Update portfolio sections)
   )
 }
 
