@@ -9,8 +9,11 @@ const projects = [
     technologies: ['Selenium', 'Cypress', 'Playwright', 'JavaScript', 'Jira', 'TestRail'],
     color: '#60A5FA',
     category: 'QA & Testing',
+<<<<<<< HEAD
     demoUrl: '',
     githubUrl: 'https://github.com/Sakyath',
+=======
+>>>>>>> a7cd96b (Update portfolio sections)
   },
   {
     title: 'API & Performance Testing Suite',
@@ -19,8 +22,11 @@ const projects = [
     technologies: ['Postman', 'JMeter', 'REST Assured', 'Swagger', 'Newman'],
     color: '#A78BFA',
     category: 'Software Testing',
+<<<<<<< HEAD
     demoUrl: '',
     githubUrl: 'https://github.com/Sakyath',
+=======
+>>>>>>> a7cd96b (Update portfolio sections)
   },
   {
     title: 'Civic Development & Governance Portal',
@@ -29,8 +35,11 @@ const projects = [
     technologies: ['React.js', 'Node.js', 'Express', 'MySQL', 'REST APIs', 'JWT'],
     color: '#34D399',
     category: 'Development',
+<<<<<<< HEAD
     demoUrl: '',
     githubUrl: 'https://github.com/Sakyath',
+=======
+>>>>>>> a7cd96b (Update portfolio sections)
   },
   {
     title: 'Freelance Web & App Development Projects',
@@ -39,8 +48,11 @@ const projects = [
     technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Firebase', 'GitHub', 'Vercel'],
     color: '#FBBF24',
     category: 'Freelance Development',
+<<<<<<< HEAD
     demoUrl: '',
     githubUrl: 'https://github.com/Sakyath',
+=======
+>>>>>>> a7cd96b (Update portfolio sections)
   },
 ]
 
